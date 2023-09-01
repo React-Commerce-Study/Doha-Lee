@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 import styled from 'styled-components';
 import plus from '../../assets/icons/icon-plus-line.svg';
 import minus from '../../assets/icons/icon-minus-line.svg';
@@ -18,7 +18,7 @@ const ProductCount = ({
   stock,
   setErrorMessage,
 }: ProductCountProps) => {
-  const [inStock, setInStock] = useState(stock > 0);
+  const inStock = stock > 0;
 
   const increaseCount = () => {
     if (count === stock) return;

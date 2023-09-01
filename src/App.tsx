@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import ProductDetail from './pages/ProductDetail';
-import { StyleSheetManager } from 'styled-components';
 
 function App() {
   return (
