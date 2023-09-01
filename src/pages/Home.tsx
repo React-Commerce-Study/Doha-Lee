@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../Components/common/Nav';
 import Slide from '../Components/Slide/Slide';
 import Main from '../Components/Main';
-import Footer from '../Components/layout/Footer';
+import Footer from '../Components/common/Footer';
 
 const Home = () => {
   return (

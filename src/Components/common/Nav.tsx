@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import logoutAPI from '../../api/LogoutAPI';
+import logoutAPI from '../../api/logoutAPI.ts';
 import loginCheck from '../../Recoil/loginCheckContext/loginCheckAtom.ts';
 import loginType from '../../Recoil/loginTypeContext/loginTypeAtom.ts';
 import Button from './Button';

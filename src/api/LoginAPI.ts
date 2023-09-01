@@ -1,19 +1,17 @@
-const ACCOUNT_URL = 'https://openmarket.weniv.co.kr/accounts/login/';
+import URL from './URL';
 
 const loginAPI = async (userInput: {
-  userInput: {
-    username: string;
-    password: string;
-    login_type: string;
-  };
+  username: string;
+  password: string;
+  login_type: string;
 }) => {
   try {
-    const response = await fetch(ACCOUNT_URL, {
+    const response = await fetch(`${URL}/accounts/login/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...userInput }),
+      body: JSON.stringify(userInput),
     });
 
     const accountData = await response.json();
@@ -21,7 +19,6 @@ const loginAPI = async (userInput: {
     if (response.ok) {
       return accountData;
     } else {
-      console.log(userInput);
       throw new Error('아이디 혹은 비밀번호가 일치하지 않습니다.');
     }
   } catch (error) {

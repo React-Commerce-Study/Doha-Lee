@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import loginType from '../Recoil/loginTypeContext/loginTypeAtom';
 import Logo from '../assets/icons/Logo-hodu.png';
-import LoginForm from '../Components/SignForm/LoginForm';
+import LoginForm from '../Components/Login/LoginForm';
 import UserButton from '../Components/common/UserButton';
 import { useRecoilState } from 'recoil';
+import { SignLayout, SignStyle } from '../Components/style/SignLayout';
 
 const Login = () => {
   const [type, setType] = useRecoilState(loginType);
@@ -36,11 +37,9 @@ const Login = () => {
     }
   };
 
-  console.log(type);
-
   return (
-    <div>
-      <LoginLayout>
+    <>
+      <SignLayout>
         <h1>
           <Link to='/'>
             <img src={Logo} alt='HODU 로고' />
@@ -68,43 +67,23 @@ const Login = () => {
             </UserButton>
           </li>
         </UserButtonStyle>
-        <LoginStyle>
+        <SignStyle>
           <h2 className='a11y-hidden'>로그인</h2>
           <LoginForm userInput={userInput} setUserInput={setUserInput} />
-        </LoginStyle>
+        </SignStyle>
         <div>
           <LinkStyle to='/signup'>회원가입</LinkStyle>
           <Link to='/'>비밀번호 찾기</Link>
         </div>
-      </LoginLayout>
-    </div>
+      </SignLayout>
+    </>
   );
 };
-
-const LoginLayout = styled.div`
-  max-width: 550px;
-  margin: 100px auto;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 70px;
-  }
-`;
 
 const UserButtonStyle = styled.ul`
   li {
     display: inline-block;
   }
-`;
-
-const LoginStyle = styled.div`
-  position: relative;
-  margin-top: -8px;
-  margin-bottom: 30px;
-  padding: 35px;
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
 `;
 
 const LinkStyle = styled(Link)`

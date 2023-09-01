@@ -1,8 +1,9 @@
-const LOGOUT_URL = 'https://openmarket.weniv.co.kr/accounts/logout/';
+import URL from './URL';
+const LOGOUT_URL = 'accounts/logout/';
 
 const logoutAPI = async () => {
   try {
-    const response = await fetch(LOGOUT_URL);
+    const response = await fetch(URL + LOGOUT_URL);
 
     const logoutData = await response.json();
 

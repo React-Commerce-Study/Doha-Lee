@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import getProducts from '../api/products';
 import styled, { css } from 'styled-components';
-import ProductItem from './ProductItems/ProductItem';
+import ProductItem from './Product/ProductItem';
 
 // TODO alt값 넣기
 const Main = () => {
