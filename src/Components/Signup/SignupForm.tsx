@@ -24,7 +24,7 @@ type signupParams = {
   };
 };
 
-const SignupForm = ({ $userType, ...rest }: SignupFormProps) => {
+const SignupForm = ({ $userType }: SignupFormProps) => {
   const navigate = useNavigate();
 
   const [selectBox, setSelectBox] = useState(false);

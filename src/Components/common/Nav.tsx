@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import logoutAPI from '../../api/logoutAPI.ts';
-import loginCheck from '../../Recoil/loginCheckContext/loginCheckAtom.ts';
-import loginType from '../../Recoil/loginTypeContext/loginTypeAtom.ts';
+import logoutAPI from 'api/LogoutAPI';
+import loginCheck from 'Recoil/loginCheckContext/loginCheckAtom';
+import loginType from 'Recoil/loginTypeContext/loginTypeAtom';
 import Button from './Button';
 // Image
-import Logo from '../../assets/icons/Logo-hodu.png';
-import Search from '../../assets/icons/search.svg';
-import Cart from '../../assets/icons/icon-shopping-cart.svg';
-import Cart2 from '../../assets/icons/icon-shopping-cart-2.svg';
-import User from '../../assets/icons/icon-user.svg';
-import User2 from '../../assets/icons/icon-user-2.svg';
-import Shopping from '../../assets/icons/icon-shopping-bag.svg';
+import Logo from 'assets/icons/Logo-hodu.png';
+import Search from 'assets/icons/search.svg';
+import Cart from 'assets/icons/icon-shopping-cart.svg';
+import Cart2 from 'assets/icons/icon-shopping-cart-2.svg';
+import User from 'assets/icons/icon-user.svg';
+import User2 from 'assets/icons/icon-user-2.svg';
+import Shopping from 'assets/icons/icon-shopping-bag.svg';
 
 const Nav = () => {
   const [loginChecked, setLoginChecked] = useRecoilState(loginCheck);

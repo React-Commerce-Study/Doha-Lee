@@ -2,11 +2,11 @@ import React, { useEffect, useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
-import loginCheck from '../../Recoil/loginCheckContext/loginCheckAtom.ts';
-import Form from '../common/Form.tsx';
-import LoginInput from '../common/LoginInput.tsx';
-import Button from '../common/Button.tsx';
-import loginAPI from '../../api/loginAPI.ts';
+import loginCheck from 'Recoil/loginCheckContext/loginCheckAtom';
+import Form from 'Components/common/Form';
+import LoginInput from 'Components/common/LoginInput';
+import Button from 'Components/common/Button';
+import loginAPI from 'api/LoginAPI';
 
 // NOTE: interface와 type, 유니온 타입
 /*

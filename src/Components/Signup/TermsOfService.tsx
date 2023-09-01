@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react';
+import { SetStateAction } from 'react';
 import { styled } from 'styled-components';
 
 import checkbox from '../../assets/icons/check-box.svg';

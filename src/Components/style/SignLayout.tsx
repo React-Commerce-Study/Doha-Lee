@@ -1,4 +1,4 @@
-import { css, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 export const SignLayout = styled.div`
   max-width: 550px;
